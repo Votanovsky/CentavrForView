@@ -1,0 +1,90 @@
+.section-quotes {
+    background: url(../media/img/elips_bg_big.jpg) no-repeat 50% 50%;
+    overflow: hidden;
+
+    .section-inner {
+        display: flex;
+        justify-content: space-between;
+
+        .section-subtittle {
+            text-align: start;
+        }
+
+        @media  (max-width: $breakpoint-xs-max) {
+            flex-direction: column;
+        }
+    }
+
+    &__left,
+    &__right {
+        width : 45%;
+        // @media  (max-width: $breakpoint-sm-max) {
+        //     width: 90%;
+        // }
+    }
+
+    &__left {
+        .text {
+            line-height: 2;
+            font-size: $fs-sm;
+        }
+
+        @media  (max-width: $breakpoint-sm-max) {
+            margin-bottom: $base*5;
+        }
+    }
+    
+}
+.slider-quotes-container {
+    max-width: 100vw;
+    margin-bottom: $base * 20;
+    // overflow: hidden;
+    box-sizing: border-box;
+}
+
+.slider-quotes {
+    @include list-null();
+    display: flex;
+    // max-width: 100vw;
+
+    &__item {
+        box-sizing: border-box;
+        position: relative;
+        width: 100vw;
+        // height: 100%;
+        padding: $base*8 $base*13.5 $base*12;
+        margin-right: $base*15;
+        
+        background: rgb(148, 144, 144);
+        background: linear-gradient(119deg, rgba(148, 144, 144, 0.4) 0%, rgba(95, 92, 92,0.14) 100%);
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
+        border-left: 1px solid rgba(255, 255, 255, 0.7);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+        box-shadow: $base*2 $base*2 $base*10 rgba(0, 0, 0, 0.5);
+        border-radius: $base * 5;
+        backdrop-filter: blur($base * 3);
+        z-index: 5;
+
+        &-text {
+            font-size: $fs-s;
+            line-height: 2;
+            color: #fff;
+        }
+        &-photo {
+            $height: $base * 15;
+
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: $base * 15;
+            height: $height;
+            border-radius: 100%;
+            overflow: hidden;
+            background-color: #fff;
+            transform: translate(-50%, -$height / 2);
+            border-bottom: $base/2 solid rgba(255, 255, 255, 0.7);
+            z-index: 10;
+
+        }
+    }
+}

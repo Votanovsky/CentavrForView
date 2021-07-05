@@ -1,0 +1,212 @@
+// === header ===
+.main-navigation {
+    display: flex;
+    align-items: center;
+    z-index: 10;
+
+    &__inner-wrap {
+        display: flex;
+        align-items: center;
+        margin-left: $base * 18;
+        flex-grow: 1;
+
+        .section-header & {
+            @media  (max-width: $breakpoint-md-max) {
+                display: none;
+                position: absolute;
+                z-index: 100;
+                top: 100%;
+                right: 0;
+                left: 0;
+                margin-left: 0;
+                padding: $base * 5;
+                background: rgb(8,0,32);
+                background: linear-gradient(128deg, rgba(8,0,32,1) 16%, rgba(53,3,74,1) 55%, rgba(69,1,70,1) 86%, rgba(33,0,77,1) 99%, rgba(0,45,40,1) 100%);
+            }
+        }
+
+        @media  (max-width: $breakpoint-md-max) {
+            flex-direction: column;
+
+            .nav,
+            .socials {
+                margin-bottom: $base * 5;
+            }
+                
+            &, 
+            .socials,
+            .btn-wrapper {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-md-max) {
+        .section-footer & {
+            flex-direction: column;
+            .logo {
+                margin-bottom: $base * 5;
+            }
+        }
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
+    .logo {
+        display: block;
+            &__link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: $base * 10;
+                height: $base * 10;
+                background: rgb(0,210,190);
+                background: linear-gradient(211deg, rgba(0,210,190,1) 0%, rgba(212,0,211,1) 84%);
+                border: $base/2 solid #fff;
+                border-radius: 100%;
+                color: #fff;
+                font-size: $fs-m;
+                font-weight: $fw-bold;
+                text-decoration: none;
+            }
+            
+    }
+    
+}
+// === header ===
+.section-header {
+    // position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #080027;
+    box-shadow: 0 $base*4 $base*6 rgba(#030e2e, .3);
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0 , 0, .3);
+        backdrop-filter: blur($base);
+    }
+
+    &--active-nav {
+        .main-navigation__inner-wrap {
+            display: flex;
+        }
+        .btn-burger__line {
+            transform: rotate(90deg);
+            transition: $transition;
+        }
+        &::before {
+            display: block;
+        }
+    }   
+}
+
+
+.btn-burger {
+    display: none;
+    // position: absolute;
+    margin-left: auto;
+    z-index: 200;
+
+    &__line {
+        display: block;
+        height: $base / 2;
+        width: $base * 5;
+        background-color: #ffffff;
+        transition: $transition;
+
+        & + & {
+            margin-top: $base;
+        }
+    }
+
+    @media  (max-width: $breakpoint-md-max) {
+        display: block;
+    }
+}
+.nav-wrapper {
+    @include list-null();
+    display: flex;
+
+    &__item {
+        & + & {
+            margin-left: $base *10;
+
+            @media  (max-width: $breakpoint-xs-max) {
+                margin-left: 0;
+            }
+        }
+        &-link {
+            @include ubuntu;
+            font-size: $fs-sm;
+            color: rgb(255, 255, 255);
+            font-weight: $fw-medium;
+            text-decoration: none;
+            transition: $transition;
+
+            &:hover {
+                color: rgb(166, 162, 167);
+            }
+
+            &--active {
+                font-weight: $fw-bold;
+                color: rgb(166, 162, 167);
+            }
+        }
+    }
+
+    @media  (max-width: $breakpoint-xs-max) {
+        flex-direction: column;
+        align-items: center;
+
+        &__item {
+            margin: 0;
+            margin-top: $base*1.5;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.socials {
+    margin-left: auto;
+}
+.socials-wrapper {
+    @include list-null();
+    display: flex;
+    align-items: center;
+
+    &__item {
+        & + & {
+            margin-left: $base *10;
+        }
+
+        &-link {
+            path {           //- настройка свг изображения
+                fill: rgb(255, 255, 255);
+                transition: $transition;
+            }
+            &:hover {
+                path {
+                    fill: rgb(166, 162, 167);
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}
+
+// === /header ===
+

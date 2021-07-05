@@ -1,0 +1,60 @@
+.section-stats {
+    display: flex;
+    // background-color: red;
+    &__icon {
+        margin-bottom: $base * 6;
+    }
+    h2 {
+        @include ubuntu();
+        font-size: $fs-xxl;
+        margin-bottom: $base * 7;
+        font-weight: $fw-medium;
+    }
+    &__number {
+        &--one {
+            color: #050208;
+        }
+        &--two {
+            color: #fff;
+        }
+    }
+    &__text {
+        @include ubuntu();
+
+        // width: 100%;
+        font-size: $fs-l;
+        font-weight: $fw-light;
+        line-height: 1.5;
+        @media  (min-width: $breakpoint-lg-max) {
+            width: 40%;
+        }
+
+    }
+
+    &__left, 
+    &__right {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+    }
+    &__left {
+        align-items: flex-end;
+        background-color: #fff;
+        color: #050208;
+        text-align: right;
+        padding: $base*16 $base*22;
+        @media  (max-width: $breakpoint-xs-max) {
+            padding: $base*7 $base*7;
+        }
+    }
+    &__right {
+        // background: black url(../media/img/elips_all3.png) no-repeat 50% 50%;
+        background: #080027;
+        padding: $base*16 $base*22;
+        @media  (max-width: $breakpoint-xs-max) {
+            padding: $base*7 $base*7;
+        }
+    }
+    
+    
+}

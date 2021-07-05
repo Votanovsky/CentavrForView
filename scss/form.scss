@@ -1,0 +1,155 @@
+.section-form {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(85deg, rgba(118,0,71,1) 0%, rgba(0,13,23,1) 95%);
+    &_elips{
+        background: url(../media/img/form_bg.png) no-repeat 50% 50%;
+        padding: 0 $base*12;
+        padding-left: $base*12;
+    }
+}
+
+.section-form_elips--man {
+    position: absolute;
+    bottom: 0;
+    left: 60vw;
+    max-height:  $base*125;
+    z-index: 5;
+}
+
+.form-container{
+    z-index: 10;
+    position: relative;
+    width:  $base*87.5;
+    padding:  $base*9  $base;
+    background:rgba(255, 255, 255, 0.2);
+    background: linear-gradient(132deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.2) 100%);
+    border-top: $base*0.2 solid rgba(255, 255, 255, 0.5);
+    border-left: $base*0.2 solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    border-radius:  $base*5;
+    backdrop-filter: blur( $base*4);
+    box-shadow: $base*4 $base*4 $base*10 rgba(0, 0, 0, 0.5);
+
+    @media  (max-width: $breakpoint-xs-max) {
+        width:  $base*78.5;;
+    }
+    @media (max-width: $breakpoint-xxs-max) {
+        width: $base*70;
+    }
+
+    .input {
+        width:  $base*50;
+        height:  $base*12;
+        font-size: $fs-m;
+        margin-bottom:  $base*6;
+        border-radius:  $base*7;
+        padding-left:  $base*12;
+        border: none;
+        background:rgba(255, 255, 255, 0.2);
+        color: #313131;
+        background: linear-gradient(132deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.2) 100%);
+        border-top: $base*0.4 solid rgba(255, 255, 255, 0.5);
+        border-left: $base*0.4 solid rgba(255, 255, 255, 0.5);
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        &-name {
+            position: relative;
+            color: #313131;
+            svg {
+                position: absolute;
+                left: 7%;
+                top: 22%;
+                // transform: translateY(-25%);
+                border:  $base/2 solid rgb(184, 174, 185);
+                border-radius: 100%;
+                path {
+                    fill: rgb(184, 174, 185);
+                }
+            }
+        }
+        &-mail {
+            position: relative;
+            svg {
+                position: absolute;
+                left: 7%;
+                top: 22%;
+                border:  $base/2 solid rgb(184, 174, 185);
+                border-radius: 100%;
+                path {
+                    fill: rgb(184, 174, 185);
+                }
+            }
+        }
+        &-phone {
+            position: relative;
+            svg {
+                position: absolute;
+                left: 7%;
+                top: 22%;
+                border:  $base/2 solid rgb(184, 174, 185);
+                border-radius: 100%;
+                path {
+                    fill: rgb(184, 174, 185);
+                }
+            }
+        }
+    }
+
+}
+.form-title {
+    font-size: $fs-l;
+    color: rgba(255, 255, 255, 0.774);
+    font-weight: $fw-regular;
+    text-align: center;
+    margin-bottom: $base*8;
+}
+
+.form-particle {
+    position: absolute;
+    border-radius: 20%;
+    backdrop-filter: blur( $base*4);
+    background:rgba(255, 255, 255, 0.2);
+    background: linear-gradient(132deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 100%);
+    border-top: $base/2 solid rgba(255, 255, 255, 0.7);
+    border-left: $base/2 solid rgba(255, 255, 255, 0.7);
+    box-shadow: $base $base $base*5 rgba(0, 0, 0, 0.5);
+    &--one {
+        top: -10%;
+        left: -10%;
+        width: $base*20;
+        height: $base*20;
+        z-index: 5;
+        @media (max-width: $breakpoint-xxs-max) {
+            width: $base*14;
+            height: $base*14;
+        }
+    }
+    &--two {
+        top: 5%;
+        right: -10%;
+        width: $base*16;
+        height: $base*16;
+        backdrop-filter: blur($base*25);
+        @media (max-width: $breakpoint-xxs-max) {
+            width: $base*11;
+            height: $base*11;
+        }
+    }
+    &--three {
+        bottom: -5%;
+        right: -5%;
+        width: $base*12;
+        height: $base*12;
+        backdrop-filter: blur($base*25);
+        @media (max-width: $breakpoint-xxs-max) {
+            width: $base*8.5;
+            height: $base*8.5;
+        }
+    }
+
+}

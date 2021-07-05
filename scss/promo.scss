@@ -1,0 +1,43 @@
+.section-promo{
+    position: relative;
+    background: rgb(107,0,84);
+    background: linear-gradient(120deg, rgba(107,0,84,1) 0%, rgba(8,0,39,1) 100%);
+    overflow: hidden;
+    padding-bottom: $base*25;
+
+    &__content {
+        width: 60%;
+        
+        h1 {
+            @include montserrat;
+            font-size: $base*9;
+            font-weight: $fw-bold;
+            text-transform: uppercase;
+            line-height: $base*12;
+            letter-spacing: $base*2;
+            margin-bottom: $base*5;
+            z-index: 10;
+            @media  (max-width: $breakpoint-md-max) {
+                line-height: $base*9;
+                font-size: $base*7;
+            }
+
+        }
+        .people {
+            position: absolute;
+            bottom: $base * -25;
+            left: 50%;
+            z-index: 5;
+        }
+        .elipse {
+            position: absolute;
+            bottom: -35%;
+            left: 55%;
+            width: $base * 162;
+            height: $base * 162;
+            border-radius: 100%;
+            background-color: #fff;
+            z-index: 1;
+        }
+    }
+}

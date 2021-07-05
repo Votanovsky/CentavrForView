@@ -1,0 +1,53 @@
+.section-page {
+    background: rgb(107,0,84);
+    background: linear-gradient(120deg, rgba(107,0,84,1) 0%, rgba(8,0,39,1) 100%);
+}
+
+.credit-img {
+    padding: $base*3;
+    width: $base*25;
+    height: $base*25;
+    box-shadow: $base*5 $base*5 $base*12 rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+    background:rgba(255, 255, 255, 0.2);
+    background: linear-gradient(132deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: $base*0.6 solid rgba(255, 255, 255, 0.5);
+    border-left: $base*0.6 solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur($base);
+}
+
+.page-head {
+    h2 {
+        margin-top: $base*10;
+    }
+}
+
+.page-diplom {
+    margin-top: $base*5;
+    img {
+        max-width: $base*90;
+    }
+}
+
+.diploms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: $base*10 $base*8;
+    box-shadow: $base*5 $base*5 $base*12 rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background:rgba(255, 255, 255, 0.2);
+    background: linear-gradient(132deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: $base*0.6 solid rgba(255, 255, 255, 0.5);
+    border-left: $base*0.6 solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur($base);
+}

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Центр юридических консультаций ООО ЦЕНТАВР. Юридическая поддержа от лучших юристов России">
+    <link type="image/x-icon" rel="shortcut icon" href="media/icons/favicon.ico">
+    <meta name="keywords" content="консультации, юристы, юридическая фирма, гражданские права"> 
+    <title>Центавр || Centavr || Юридические консульации || Онлайн || Помощь юриста</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- header -->
+<header class="section-outer section-header">
+    <div class="section-inner section-inner--wide vertical-indent vertical-indent--s">
+        <div class="main-navigation" id="main-navigation">
+            <a href="index.php" class="logo__link" aria-label="logo">Ц</a> <!-- атр. aria-label="" нужен для SEO, добавляется к тегу а -->
+            <button class="btn_menu btn_menu--no-bg btn-burger">
+                <span class="btn-burger__line btn-burger__line--one"></span>
+                <span class="btn-burger__line btn-burger__line--two"></span>
+                <span class="btn-burger__line btn-burger__line--three"></span>
+            </button>
+            
+            <div class="main-navigation__inner-wrap">
+                <nav class="nav">
+                    <ul class="nav-wrapper">
+                        <li class="nav-wrapper__item">
+                            <a href="#section-promo" class="nav-wrapper__item-link ">Главная</a>
+                        </li>
+                        <li class="nav-wrapper__item">
+                            <a href="#companys" class="nav-wrapper__item-link"">Компании</a>
+                        </li>
+                        <li class="nav-wrapper__item">
+                            <a href="#about" class="nav-wrapper__item-link">О нас</a>
+                        </li>
+                        <li class="nav-wrapper__item">
+                            <a href="#catalog" class="nav-wrapper__item-link">Услуги</a>
+                        </li>
+                        <li class="nav-wrapper__item">
+                            <a href="#jurists" class="nav-wrapper__item-link">Юристы</a>
+                        </li>
+                        <li class="nav-wrapper__item">
+                            <a href="#footer" class="nav-wrapper__item-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="socials">
+                    <ul class="socials-wrapper">
+                        <li class="socials-wrapper__item">
+                            <a href="#" class="socials-wrapper__item-link" aria-label="facebook"> 
+                                <svg width="11" height="21" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.65597 17V9.24548H8.22501L8.60969 6.2234H5.65597V4.294C5.65597 3.41904 5.89578 2.82278 7.13417 2.82278L8.71368 2.82208V0.119112C8.44051 0.0822826 7.5029 -1.65981e-08 6.41206 -1.65981e-08C4.13475 -1.65981e-08 2.57564 1.40836 2.57564 3.9947V6.2234H-2.3404e-08V9.24548H2.57564V17H5.65597Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socials-wrapper__item">
+                            <a href="#" class="socials-wrapper__item-link">
+                                <svg width="19" height="16" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.81972 12.0232C5.38191 12.0232 5.4563 11.8651 5.3053 11.4664L4.01782 7.41344L13.9283 1.78983" fill="#9399AB"/>
+                                    <path d="M5.81982 12.0232C6.15768 12.0232 6.30696 11.8754 6.49554 11.7L8.29744 10.0241L6.04979 8.72772" fill="#70788E"/>
+                                    <path d="M6.04945 8.72806L11.4957 12.5768C12.1172 12.9048 12.5657 12.735 12.7205 12.0249L14.9374 2.03246C15.1644 1.16206 14.5906 0.76729 13.996 1.02547L0.978404 5.82666C0.0898302 6.16756 0.0950105 6.64173 0.816436 6.85301L4.15705 7.85032L11.8909 3.18335C12.256 2.97158 12.5911 3.08543 12.3161 3.31891"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socials-wrapper__item">
+                            <a href="#" class="socials-wrapper__item-link">
+                                <svg width="21" height="16" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0328 1.84041C16.4253 2.11761 15.7726 2.30417 15.0877 2.38898C15.7868 1.95807 16.3239 1.27594 16.5767 0.46342C15.9222 0.862259 15.1973 1.15191 14.4257 1.308C13.8081 0.631966 12.9276 0.210602 11.9535 0.210602C10.0832 0.210602 8.56631 1.76886 8.56631 3.69017C8.56631 3.96313 8.59598 4.22867 8.65402 4.48334C5.83853 4.33759 3.3424 2.95159 1.67204 0.847419C1.38053 1.36154 1.2135 1.95887 1.2135 2.59648C1.2135 3.80359 1.81147 4.86853 2.72005 5.49303C2.16541 5.47448 1.64276 5.31812 1.18615 5.05709V5.10081C1.18615 6.7876 2.35476 8.19347 3.90258 8.51347C3.61882 8.59297 3.31957 8.63537 3.01181 8.63537C2.79357 8.63537 2.581 8.61417 2.37462 8.5731C2.80543 9.95591 4.05659 10.9619 5.53864 10.99C4.37931 11.9228 2.91868 12.4793 1.33113 12.4793C1.05768 12.4793 0.788618 12.4634 0.523682 12.4308C2.02249 13.4183 3.80327 13.9944 5.71599 13.9944C11.946 13.9944 15.3531 8.69155 15.3531 4.09365C15.3531 3.94259 15.3498 3.79286 15.3433 3.64313C16.0053 3.15286 16.5798 2.53937 17.0338 1.84107"/>
+                                </svg>
+                                    
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </div>
+</header>
+
+<!-- MAIN -->
+<main>
+    
+<!-- promo -->
+<section class="section-outer section-promo" id="section-promo">
+    <div class="section-inner vertical-indent vertical-indent--l">
+        <div class="section-promo__content">
+            <!-- <div class="elipse"></div> -->
+            <img src="media/img/promo_people.png" alt="promo_img_jurist" class="people">
+            <div class="text">
+                <h1>ДОБРО<br>ПОЖАЛОВАТЬ<br>В «ЦЕНТАВР»</h1>
+                <h2>Ваши проблемы - <br> наше решение</h2>
+                <button data-modal class="btn btn--main">Консультация</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /promo -->
+
+<!-- companys -->
+<section class="section-outer section-companys" id="companys">
+    <div class="section-inner vertical-indent vertical-indent--sm">
+        <h2 class="visually-hidden">companys</h2>
+        <a href="#"><img src="media/icons/oil.svg" alt=""></a>
+        <a href="#"><img src="media/icons/avto.svg" alt=""></a>
+        <a href="#"><img src="media/icons/abibs.svg" alt=""></a>
+        <a href="#"><img src="media/icons/faceboklog.svg" alt=""></a>
+        <a href="#"><img src="media/icons/apple.svg" alt=""></a>
+    </div>
+</section>
+<!--/ companys -->
+
+<!-- about -->
+<section class="section-outer section-about" id="about">
+    <div class="section-inner vertical-indent vertical-indent--m">
+        <h2>О нас</h2>
+        <div class="section-subtittle">Фирма <span>юридических</span> консультаций <span>Центавр</span></div>
+        <div class="card glassmorphism">
+            <div class="card-top">
+                <div class="dots-wrapper">
+                    <div class="dots-item"></div>
+                    <div class="dots-item"></div>
+                    <div class="dots-item"></div>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="card-text">Наша команда специалистов помогает людям по всей стране решать любые правовые вопросы, с которыми человек или компания может столкнуться. Уже более 20 мы являевмся лидерами на рынке услуг по юридическим консультациям и гордимся своей заслуженной репутацией. Каждое дело требует особого подхода и мы готовы вам его гарантировать. Сферы, которые мы охватываем и подробное портфолио по юристам смотрите ниже.
+                </div>
+            </div>
+            <div class="card-bottom">
+                <div class="card-bottom_info plush">Основна <br> в 1997</div>
+                <div class="card-bottom_info plush">Дел выиграно <br> 1000+</div>
+                <div class="card-bottom_info plush">Наград <br> 132</div>
+            </div>
+        </div>
+    </div> 
+
+</section>
+<!-- /about -->
+
+<!-- stats -->
+<section class="section-stats" id="stats">
+    <h2 class="visually-hidden">Stats</h2>
+    <div class="section-stats__left">
+        <div class="section-stats__icon">
+            <img src="media/icons/stats_time.svg" alt="">
+        </div>
+        <h2 class="section-stats__number--one">86%</h2>
+        <div class="section-stats__text">
+            Выигранных дел,
+            которыми мы можем
+            гордиться
+        </div>
+    </div>
+    <div class="section-stats__right">
+        <div class="section-stats__icon">
+            <img src="media/icons/stats_mans.svg" alt="">
+        </div>
+        <h2 class="section-stats__number--two">2147</h2>
+        <div class="section-stats__text">
+            Довольных клиентов, получивших индивидуальный подход
+        </div>
+    </div>
+</section>
+<!--/ stats -->
+
+<!-- form -->
+<section class="section-form" id="section-form">
+    <div class="section-form_elips">
+        <div class="vertical-indent--m section-inner">
+            <div class="form-container glassmorphism" id="form">
+                <form action="#">
+                    <div class="form-title">Консультация</div>
+                    <div class="input-wrapper">
+                        <div class="input-name">
+                            <input type="text" name="username" placeholder="Введите имя" class="input">
+                            <svg width="20" height="20" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.5 0C10.993 0 7.32617 3.66678 7.32617 8.17383C7.32617 12.6809 10.993 16.3477 15.5 16.3477C20.007 16.3477 23.6738 12.6809 23.6738 8.17383C23.6738 3.66678 20.007 0 15.5 0Z" fill="url(#paint0_linear)"/>
+                                <path d="M25.6698 21.6876C23.432 19.4154 20.4654 18.1641 17.3164 18.1641H13.6836C10.5347 18.1641 7.568 19.4154 5.33018 21.6876C3.10333 23.9487 1.87695 26.9332 1.87695 30.0918C1.87695 30.5934 2.28359 31 2.78516 31H28.2148C28.7164 31 29.123 30.5934 29.123 30.0918C29.123 26.9332 27.8967 23.9487 25.6698 21.6876Z" fill="url(#paint1_linear)"/>
+                                <defs>
+                                <linearGradient id="paint0_linear" x1="15.5" y1="0" x2="15.5" y2="16.3477" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0.3"/>
+                                <stop offset="0.526042" stop-color="white" stop-opacity="0.7"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear" x1="15.5" y1="18.1641" x2="15.5" y2="31" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0.3"/>
+                                <stop offset="0.526042" stop-color="white" stop-opacity="0.7"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="input-mail">
+                            <input type="email" name="email" placeholder="Введите email" class="input">
+                            <svg width="20" height="20" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.5 0C10.993 0 7.32617 3.66678 7.32617 8.17383C7.32617 12.6809 10.993 16.3477 15.5 16.3477C20.007 16.3477 23.6738 12.6809 23.6738 8.17383C23.6738 3.66678 20.007 0 15.5 0Z" fill="url(#paint0_linear)"/>
+                                <path d="M25.6698 21.6876C23.432 19.4154 20.4654 18.1641 17.3164 18.1641H13.6836C10.5347 18.1641 7.568 19.4154 5.33018 21.6876C3.10333 23.9487 1.87695 26.9332 1.87695 30.0918C1.87695 30.5934 2.28359 31 2.78516 31H28.2148C28.7164 31 29.123 30.5934 29.123 30.0918C29.123 26.9332 27.8967 23.9487 25.6698 21.6876Z" fill="url(#paint1_linear)"/>
+                                <defs>
+                                <linearGradient id="paint0_linear" x1="15.5" y1="0" x2="15.5" y2="16.3477" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0.3"/>
+                                <stop offset="0.526042" stop-color="white" stop-opacity="0.7"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear" x1="15.5" y1="18.1641" x2="15.5" y2="31" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0.3"/>
+                                <stop offset="0.526042" stop-color="white" stop-opacity="0.7"/>
+                                </linearGradient>
+                                </defs>
+                                </svg>
+                        </div>
+                        <div class="input-phone">
+                            <input type="phone" name="phone" placeholder="Введите телефон" class="input">
+                            <svg width="20" height="20" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.5 0C10.993 0 7.32617 3.66678 7.32617 8.17383C7.32617 12.6809 10.993 16.3477 15.5 16.3477C20.007 16.3477 23.6738 12.6809 23.6738 8.17383C23.6738 3.66678 20.007 0 15.5 0Z" fill="url(#paint0_linear)"/>
+                                <path d="M25.6698 21.6876C23.432 19.4154 20.4654 18.1641 17.3164 18.1641H13.6836C10.5347 18.1641 7.568 19.4154 5.33018 21.6876C3.10333 23.9487 1.87695 26.9332 1.87695 30.0918C1.87695 30.5934 2.28359 31 2.78516 31H28.2148C28.7164 31 29.123 30.5934 29.123 30.0918C29.123 26.9332 27.8967 23.9487 25.6698 21.6876Z" fill="url(#paint1_linear)"/>
+                                <defs>
+                                <linearGradient id="paint0_linear" x1="15.5" y1="0" x2="15.5" y2="16.3477" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0.3"/>
+                                <stop offset="0.526042" stop-color="white" stop-opacity="0.7"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear" x1="15.5" y1="18.1641" x2="15.5" y2="31" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0.3"/>
+                                <stop offset="0.526042" stop-color="white" stop-opacity="0.7"/>
+                                </linearGradient>
+                                </defs>
+                                </svg>
+                        </div>
+                        <div class="input-submit">
+                            <input class="btn btn--submit" type="submit" name="submit" placeholder="ОТПРАВИТЬ">
+                        </div>
+                    </div>
+                </form>
+                <div class="form-particle form-particle--one"></div>
+                <div class="form-particle form-particle--two"></div>
+                <div class="form-particle form-particle--three"></div>
+            </div>
+        </div>
+        <img src="media/img/form_man.png" alt="man" class="section-form_elips--man">
+    </div>
+</section>
+<!-- form -->
+
+<!-- catalog -->
+<section class="section-catalog " id="catalog">
+    <div class="section-catalog_elips section-outer">
+        <div class="section-inner vertical-indent vertical-indent--m">
+            <h2>Направления консультаций</h2>
+            <div class="section-subtittle">Юристы <span>по всей России</span> помогают нашим клиентам <span>решать юридические вопросы</span> любой сложности</div>
+            <div class="catalog-wrapper">
+                <div class="catalog-card glassmorphism">
+                    <div class="catalog-card_img">
+                        <img src="media/icons/cup.png" alt="img">
+                    </div>
+                    <div class="catalog-card_title">Кредитные вопросы</div>
+                    <div class="catalog-card_descr">Кредитование – это финансовые взаимоотношения, основывающие на выдаче ссуды различной направленности. Формат: кредитор - заёмщик.</div>
+                    <a href="credit.php" class="btn btn--catalog">подробнее</a>
+                </div>
+                <div class="catalog-card glassmorphism">
+                    <div class="catalog-card_img">
+                        <img src="media/icons/book.png" alt="img">
+                    </div>
+                    <div class="catalog-card_title">Банковские споры</div>
+                    <div class="catalog-card_descr">Консультация банковского юриста. Выстраивание стратегии защиты. Анализ кредитных документов. Юридическое сопровождение в суде Формат: юрист - банк.</div>
+                    <a href="bank.php" class="btn btn--catalog">подробнее</a>
+                </div>
+                <div class="catalog-card glassmorphism">
+                    <div class="catalog-card_img">
+                        <img src="media/icons/print.png" alt="img">
+                    </div>
+                    <div class="catalog-card_title">Гражданские дела</div>
+                    <div class="catalog-card_descr">Отрасль права, объединяющая правовые нормы, регулирующие имущественные, связанные и несвязанные с ними личные неимущественные отношения.</div>
+                    <a href="person.php" class="btn btn--catalog">подробнее</a>
+                </div>
+                <div class="catalog-card glassmorphism">
+                    <div class="catalog-card_img">
+                        <img src="media/icons/cart.png" alt="img">
+                    </div>
+                    <div class="catalog-card_title">Земельные вопросы</div>
+                    <div class="catalog-card_descr">Это отрасль права, регулирующая отношения в области реализации права собственности и иных вещных прав на землю, а также её межевания.</div>
+                    <a href="earth.php" class="btn btn--catalog">подробнее</a>
+                </div>
+                <div class="catalog-card glassmorphism">
+                    <div class="catalog-card_img">
+                        <img src="media/icons/satistic.png" alt="img">
+                    </div>
+                    <div class="catalog-card_title">Корпоративное вопросы</div>
+                    <div class="catalog-card_descr">Это подотрасль гражданского права, совокупность норм, регулирующих на основе методов правового регулирования общественные отношения, связанные деятельностью корпораций</div>
+                    <a href="corporate" class="btn btn--catalog">подробнее</a>
+                </div>
+                <div class="catalog-card glassmorphism">
+                    <div class="catalog-card_img">
+                        <img src="media/icons/bitcoin.png" alt="img">
+                    </div>
+                    <div class="catalog-card_title">Налоговые споры</div>
+                    <div class="catalog-card_descr">Лююые юридические споры, возникающие между налогоплательщиками или другим участниками налоговых правоотношений</div>
+                    <a href="nalog.php" class="btn btn--catalog">подробнее</a>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+</section>
+<!-- /catalog -->
+
+<!-- faq -->
+<section class="section-outer section-faq" id="section-faq">
+    <div class="section-inner vertical-indent vertical-indent--m">
+        <h2>Помощь клиентам</h2>
+        <div class="section-subtittle">Часто <span>задаваемые</span> вопросы</div>
+        <ul class="faq-accordion">
+            <li class="faq-accordion__item">
+                <div class="faq-accordion__item-trigger">
+                    <div class="faq-accordion__item-trigger-icon">
+                        <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="arrow" d="M2 2L9 9L16 2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="faq-accordion__item-trigger-text">
+                        Почему выбирают нас?
+                    </h3>
+                </div>
+                <div class="faq-accordion__item-content">
+                    <div class="faq-accordion__item-content-text">
+                        Мы лидеры на рынке юридических косультаций: наша статистке успешных дел выше на 30%, чем всреднем по стране. Работая с каждым клиентов по индивидуальной схеме, мы учитываем все потенциальные исходы.
+                    </div>
+                </div>
+            </li>
+            <li class="faq-accordion__item">
+                <div class="faq-accordion__item-trigger">
+                    <div class="faq-accordion__item-trigger-icon">
+                        <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="arrow" d="M2 2L9 9L16 2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="faq-accordion__item-trigger-text">
+                        Сколько стоят наши услуги?
+                    </h3>
+                </div>
+                <div class="faq-accordion__item-content">
+                    <div class="faq-accordion__item-content-text">
+                        Каждая услуга рассчитывается индивидуально, в зависимости от сферы деятельности, компетенции юриста, затраченного времени, расходов на ведение деятельности.
+                    </div>
+                </div>
+            </li>
+            <li class="faq-accordion__item">
+                <div class="faq-accordion__item-trigger">
+                    <div class="faq-accordion__item-trigger-icon">
+                        <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="arrow" d="M2 2L9 9L16 2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="faq-accordion__item-trigger-text">
+                        Какой спектр услуг мы предоставляем?
+                    </h3>
+                </div>
+                <div class="faq-accordion__item-content">
+                    <div class="faq-accordion__item-content-text">
+                        Гражданское право, корпоративное право, земельное право, налоговые и банковские споры, кредитование.
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- /faq -->
+
+
+<!-- jurists -->
+<section class="section-jurists" id="jurists">
+    <div class="section-jurists_elips section-outer">
+        <div class="section-inner vertical-indent vertical-indent--m">
+            <div class="card-jurists_tabs glassmorphism">
+                <div class="card-jurists_top">
+                    <h2>Наши юристы</h2>
+                </div>
+                <div class="card-jurists_names">
+    
+                    <div class="name-wrap">
+                        <div class="card-jurists_name">Евгения</div>
+                        <div class="card-jurists_name">Ренат</div>
+                        <div class="card-jurists_name">Борис</div>
+                        <div class="card-jurists_name">Екатерина</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-jurists_people glassmorphism">
+                <div class="card-wrapper">
+                    <div class="people-top">
+                        <div class="people-name">Юрист по семейным вопросам</div>
+                        <div class="people-tabs_wrap">
+                            <div class="categories">Обо мне:</div>
+                            <a href="credit.php"><div class="categories">Услуга</div></a>
+                        </div>
+                    </div>
+                    <div class="people-content">
+                        <div class="info"> <span>Зотина Евгения Клементьевна.</span> <br> Юрист по семейным делам - это профессионал с высшим юридическим образованием и специализиурющийся на семейном праве. Каждое семейное дело, будь это расторжение брака, раздел имущества или определение места жительства ребенка, индивидуально и требует особого подхода.</div>
+                        <img src="media/img/char1.png" alt="man">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-jurists_people glassmorphism">
+                <div class="card-wrapper">
+                    <div class="people-top">
+                        <div class="people-name">Юрист по семейным вопросам</div>
+                        <div class="people-tabs_wrap">
+                            <div class="categories">Обо мне:</div>
+                            <a href="credit.php"><div class="categories">Услуга</div></a>
+                        </div>
+                    </div>
+                    <div class="people-content">
+                        <div class="info"> <span>Соматин Ренат Альбертович.</span> <br> Юрист по семейным делам - это профессионал с высшим юридическим образованием и специализиурющийся на семейном праве. Каждое семейное дело, будь это расторжение брака, раздел имущества или определение места жительства ребенка, индивидуально и требует особого подхода.</div>
+                        <img src="media/img/char4.png" alt="man">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-jurists_people glassmorphism">
+                <div class="card-wrapper">
+                    <div class="people-top">
+                        <div class="people-name">Юрист по семейным вопросам</div>
+                        <div class="people-tabs_wrap">
+                            <div class="categories">Обо мне:</div>
+                            <a href="credit.php"><div class="categories">Услуга</div></a>
+                        </div>
+                    </div>
+                    <div class="people-content">
+                        <div class="info"> <span>Николаев Борис Александрович.</span> <br> Юрист по семейным делам - это профессионал с высшим юридическим образованием и специализиурющийся на семейном праве. Каждое семейное дело, будь это расторжение брака, раздел имущества или определение места жительства ребенка, индивидуально и требует особого подхода.</div>
+                        <img src="media/img/char3.png" alt="man">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-jurists_people glassmorphism">
+                <div class="card-wrapper">
+                    <div class="people-top">
+                        <div class="people-name">Юрист по семейным вопросам</div>
+                        <div class="people-tabs_wrap">
+                            <div class="categories">Обо мне:</div>
+                            <a href="credit.php"><div class="categories">Услуга</div></a>
+                        </div>
+                    </div>
+                    <div class="people-content">
+                        <div class="info"> <span>Качалина Екатерина Петрововна.</span> <br> Юрист по семейным делам - это профессионал с высшим юридическим образованием и специализиурющийся на семейном праве. Каждое семейное дело, будь это расторжение брака, раздел имущества или определение места жительства ребенка, индивидуально и требует особого подхода.</div>
+                        <img src="media/img/char2.png" alt="man">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- /jurists -->
+
+<!-- quotes -->
+<!-- <section class="section-outer section-quotes" id="quotes">
+    <div class="section-inner vertical-indent vertical-indent--s">
+        <div class="section-quotes__left">
+            <h2>Отзывы</h2>
+            <div class="section-subtittle">Что говорят о нас клиенты:</div>
+            <div class="text">
+                Отправляйте нам свои отзывы, описав вашу проблему и то, как прошло её решение. Все отзывы принимаются на нашу почту.
+            </div>
+        </div>
+        <div class="section-quotes__right">
+            <div class="slider-quotes-container swiper-container">
+                <ul class="slider-quotes swiper-wrapper">
+                    <li class="slider-quotes__item swiper-slide">
+                        <div class="slider-quotes__item-text">
+                            Обращался к Евгении по вопросу раздела земельного имущества. Работа супер! Консультация отличная!
+                        </div>
+                        <div class="slider-quotes__item-photo">
+                            <img src="media/img/quotes_face.png" alt="face">
+                        </div>
+                    </li>
+
+                    <li class="slider-quotes__item swiper-slide">
+                        <div class="slider-quotes__item-text">
+                        Работал с Борисом по вопросу банковских платежей. Работа супер! Консультация отличная!
+                        </div>
+                        <div class="slider-quotes__item-photo">
+                            <img src="media/img/quotes_face.png" alt="face">
+                        </div>
+                    </li>
+
+                    <li class="slider-quotes__item swiper-slide">
+                        <div class="slider-quotes__item-text">
+                        Обращался к Ренату по вопросу раздела земельного имущества. Работа супер! Консультация отличная!
+                        </div>
+                        <div class="slider-quotes__item-photo">
+                            <img src="media/img/quotes_face.png" alt="face">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section> -->
+<!-- /quotes -->
+
+</main>
+<!-- /MAIN -->
+
+<div class="overlay hide-modal">
+    <div class="form-container glassmorphism" id="form">
+        <form action="#">
+            <div class="form-title">Консультация</div>
+            <div class="input-wrapper">
+                <div class="input-name">
+                    <input type="text" name="username" placeholder="Введите имя" class="input">
+                    <svg width="20" height="20" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 0C10.993 0 7.32617 3.66678 7.32617 8.17383C7.32617 12.6809 10.993 16.3477 15.5 16.3477C20.007 16.3477 23.6738 12.6809 23.6738 8.17383C23.6738 3.66678 20.007 0 15.5 0Z" fill="url(#paint0_linear)"/>
+                        <path d="M25.6698 21.6876C23.432 19.4154 20.4654 18.1641 17.3164 18.1641H13.6836C10.5347 18.1641 7.568 19.4154 5.33018 21.6876C3.10333 23.9487 1.87695 26.9332 1.87695 30.0918C1.87695 30.5934 2.28359 31 2.78516 31H28.2148C28.7164 31 29.123 30.5934 29.123 30.0918C29.123 26.9332 27.8967 23.9487 25.6698 21.6876Z" fill="url(#paint1_linear)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear" x1="15.5" y1="0" x2="15.5" y2="16.3477" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" stop-opacity="0.3"/>
+                        <stop offset="0.526042" stop-color="white" stop-opacity="0.7"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear" x1="15.5" y1="18.1641" x2="15.5" y2="31" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" stop-opacity="0.3"/>
+                        <stop offset="0.526042" stop-color="white" stop-opacity="0.7"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="input-mail">
+                    <input type="email" name="email" placeholder="Введите email" class="input">
+                    <svg width="20" height="20" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 0C10.993 0 7.32617 3.66678 7.32617 8.17383C7.32617 12.6809 10.993 16.3477 15.5 16.3477C20.007 16.3477 23.6738 12.6809 23.6738 8.17383C23.6738 3.66678 20.007 0 15.5 0Z" fill="url(#paint0_linear)"/>
+                        <path d="M25.6698 21.6876C23.432 19.4154 20.4654 18.1641 17.3164 18.1641H13.6836C10.5347 18.1641 7.568 19.4154 5.33018 21.6876C3.10333 23.9487 1.87695 26.9332 1.87695 30.0918C1.87695 30.5934 2.28359 31 2.78516 31H28.2148C28.7164 31 29.123 30.5934 29.123 30.0918C29.123 26.9332 27.8967 23.9487 25.6698 21.6876Z" fill="url(#paint1_linear)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear" x1="15.5" y1="0" x2="15.5" y2="16.3477" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" stop-opacity="0.3"/>
+                        <stop offset="0.526042" stop-color="white" stop-opacity="0.7"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear" x1="15.5" y1="18.1641" x2="15.5" y2="31" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" stop-opacity="0.3"/>
+                        <stop offset="0.526042" stop-color="white" stop-opacity="0.7"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                </div>
+                <div class="input-phone">
+                    <input type="phone" name="phone" placeholder="Введите телефон" class="input">
+                    <svg width="20" height="20" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 0C10.993 0 7.32617 3.66678 7.32617 8.17383C7.32617 12.6809 10.993 16.3477 15.5 16.3477C20.007 16.3477 23.6738 12.6809 23.6738 8.17383C23.6738 3.66678 20.007 0 15.5 0Z" fill="url(#paint0_linear)"/>
+                        <path d="M25.6698 21.6876C23.432 19.4154 20.4654 18.1641 17.3164 18.1641H13.6836C10.5347 18.1641 7.568 19.4154 5.33018 21.6876C3.10333 23.9487 1.87695 26.9332 1.87695 30.0918C1.87695 30.5934 2.28359 31 2.78516 31H28.2148C28.7164 31 29.123 30.5934 29.123 30.0918C29.123 26.9332 27.8967 23.9487 25.6698 21.6876Z" fill="url(#paint1_linear)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear" x1="15.5" y1="0" x2="15.5" y2="16.3477" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" stop-opacity="0.3"/>
+                        <stop offset="0.526042" stop-color="white" stop-opacity="0.7"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear" x1="15.5" y1="18.1641" x2="15.5" y2="31" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" stop-opacity="0.3"/>
+                        <stop offset="0.526042" stop-color="white" stop-opacity="0.7"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                </div>
+                <div class="input-submit">
+                    <input class="btn btn--submit" type="submit" name="submit" placeholder="ОТПРАВИТЬ">
+                </div>
+            </div>
+        </form>
+        <div class="form-particle modal-close form-particle--one">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="form-particle form-particle--two"></div>
+        <div class="form-particle form-particle--three"></div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer section-outer"  id="footer">
+    <div class="section-inner section-inner--wide vertical-indent vertical-indent--s">
+        <div class="footer__wrapper">
+            <div class="footer__adress">
+                <div class="footer__descr">Наш адрес: г.Подольск, Революционный проспект 17.</div>
+                <div class="footer__maps"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2263.7836726548758!2d37.558672850826376!3d55.43156624158429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aa84178efd3c7%3A0xa6b067a71447f870!2z0KDQtdCy0L7Qu9GO0YbQuNC-0L3QvdGL0Lkg0L_RgNC-0YHQvy4sIDE3LzMyLCDQn9C-0LTQvtC70YzRgdC6LCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0LsuLCAxNDIxMTY!5e0!3m2!1sru!2sru!4v1623775257606!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+            </div>
+            <div class="footer__wrapper_two">
+                <div class="footer__contacts">
+                    <div class="footer__contacts__tittle">Контакты</div>
+                    <div class="footer__contacts__number">Тел: 8-800-555-55-55</div>
+                    <div class="footer__contacts__homenumber">Доп. тел: 8-800-555-55-55</div>  
+                    <div class="footer__contacts__mail">centavr@gmail.com</div>
+                    <div class="footer__contacts__society">
+                        <a href="https://www.instagram.com/mebelinn_shop/?hl=ru" class="footer__contacts__society__inst "><img src="media/icons/inst_m.svg" alt="inst" class="footer__img"></a>
+                        <a href="https://vk.com/public203309249" class="footer__contacts__society__vk"><img src="media/icons/vk_m.svg" alt="vk" class="footer__img"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /FOOTER -->
+
+<script src="js/three.min.js"></script>
+<script src="js/vanta.globe.min.js"></script>
+<script src="js/vanilla-tilt.js"></script>
+<script src="js/vanta.halo.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

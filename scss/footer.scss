@@ -1,0 +1,79 @@
+.footer {
+    background: rgb(107,0,84);
+    background: linear-gradient(120deg, rgba(107,0,84,1) 0%, rgba(8,0,39,1) 100%);
+    padding:  $base*6  $base*4;
+    // &_two {
+    //     // margin-top: 10px;
+    // }
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        background: rgb(148, 144, 144);
+        background: linear-gradient(119deg, rgba(148, 144, 144, 0.4) 0%, rgba(95, 92, 92,0.14) 100%);
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: $base*2 $base*2 $base*9 rgba(0, 0, 0, 0.5);
+        border-radius: $base * 5;
+        backdrop-filter: blur($base * 2);
+        padding: 50px 10px;
+
+        @media  (max-width: $breakpoint-md-max) {
+            flex-direction: column;
+        }
+
+    }
+    &__descr {
+        font-size:  $base*4;
+        font-weight: 400;
+        color: #fff;
+    }
+    &__maps {
+        margin-top:  $base*4;
+        // width:  $base*100;
+        height:  $base*62;
+        box-shadow: $base*2 $base*2 $base*9 rgba(0, 0, 0, 0.5);
+        iframe {
+            border-radius: 10px;
+            
+        }
+        
+    }
+    &__wrapper_two {
+        display: flex;
+    }
+    &__contacts {
+        font-size:  $base*4;
+        font-weight: 400;
+        color: #fff;
+        padding-left:  $base*2;
+        &__tittle {
+            font-weight: 700;
+        }
+        &__number {
+            margin-top:  $base*5;
+        }
+        &__homenumber {
+            margin-top:  $base*5;
+        }
+        &__mail {
+            margin-top:  $base*5;
+        }
+        &__society {
+            margin-top:  $base*17.5;
+            &__vk {
+                margin-left:  $base*2;
+                img {
+                    border-radius: 19%;
+                }
+            }
+            @media  (max-width: $breakpoint-md-max) {
+                margin-top:  $base*5;
+            }
+        }
+        @media  (max-width: $breakpoint-md-max) {
+            margin-top: $base*4;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

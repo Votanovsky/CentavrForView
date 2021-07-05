@@ -1,0 +1,176 @@
+.section-jurists {
+    background: rgb(118,0,71);
+    background: linear-gradient(85deg, rgba(118,0,71,1) 0%, rgba(0,13,23,1) 73%);
+    &_elips {
+       background: url(../media/img/bg_jurist2.png) no-repeat 50% 50%;
+    }
+    .section-inner {
+        display: flex;
+    }
+}
+.card-jurists {
+
+    // ==============/tabs====================
+    &_tabs {
+        background: rgb(148, 144, 144);
+        background: linear-gradient(119deg, rgba(148, 144, 144, 0.4) 0%, rgba(95, 92, 92,0.14) 100%);
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
+        border-left: 1px solid rgba(255, 255, 255, 0.7);
+        box-shadow: $base*2 $base*2 $base*10 rgba(0, 0, 0, 0.5);
+        border-radius: $base * 5;
+        overflow: hidden;
+        backdrop-filter: blur($base * 3);
+        position: relative;
+        min-width: $base*30;
+        text-align: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: $base*7;
+
+        @media  (max-width: $breakpoint-xs-max) {
+            max-width: $base*17;
+        }
+        
+
+    }
+    &_top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        padding: $base*1.2;
+        h2 {
+            padding: 0;
+            margin: 0;
+            margin-bottom: $base*2;
+            text-align: center;
+
+            @media  (max-width: $breakpoint-xs-max) {
+                font-size: $fs-s;
+            }
+        }
+
+        background: rgb(148, 144, 144);
+        background: linear-gradient(119deg, rgba(36, 3, 66, 0.6) 0%, rgba(2, 1, 77, 0.4)00%);
+    }
+    &-wrap {
+        display: flex;
+    }
+    &_names {
+        margin-top: $base*7;
+        display: flex;
+        .dots-wrapper {
+            flex-direction: column;
+            margin-right: $base*2;
+            margin-top: $base*7;
+        }
+    }
+    &_name {
+        font-size: $fs-m;
+        font-weight: $fw-regular;
+        margin-bottom: $base*8;
+        cursor: pointer;
+        transition: $transition;
+        color: #fff;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover {
+            // text-decoration: underline;
+            color: rgba(2, 1, 77, 0.589);
+            font-weight: $fw-medium;
+            transition: $transition;
+        }
+    }
+    // ==============/tabs====================
+
+    // ==============/people====================
+    &_people {
+        background: rgb(148, 144, 144);
+        background: linear-gradient(119deg, rgba(148, 144, 144, 0.4) 0%, rgba(95, 92, 92,0.14) 100%);
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
+        border-left: 1px solid rgba(255, 255, 255, 0.7);
+        box-shadow: $base*2 $base*2 $base*10 rgba(0, 0, 0, 0.5);
+        border-radius: $base * 5;
+        backdrop-filter: blur($base * 3);
+        max-height: $base*100;
+        padding: $base*8 $base*4;
+        overflow: hidden;
+        .card-wrapper {
+            display: flex;
+            flex-direction: column;
+            .people {
+                &-top {
+                    display: flex;
+                    // justify-content: space-between;
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+                &-tabs_wrap {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    a {
+                        color: #fff;
+                    }
+                    .categories {
+                        font-size: $fs-m;
+                        font-weight: $fw-medium;
+                        margin-bottom: $base*3;
+                        margin-right: $base * 2;
+                        text-transform: uppercase;
+                        text-decoration: underline;
+                        transition: $transition;
+                        cursor: pointer;
+                        &:hover {
+                            // text-decoration: underline;
+                            color: rgba(2, 1, 77, 0.589);
+                            // font-weight: $fw-medium;
+                            transition: $transition;
+                        }
+                        &--active {
+                            // text-decoration: underline;
+                            color: rgba(2, 1, 77, 0.589);
+                            // font-weight: $fw-medium;
+                            transition: $transition;
+                        }
+                    }
+                }
+                &-content {
+                    display: flex;
+                    align-items: center;
+                    .info {
+                        font-size: $fs-m;
+                        font-weight: $fw-medium;
+                        span {
+                            font-weight: $fw-bold;
+                        }
+                    }
+                    img {
+                        max-width: $base*62;
+                        @media  (max-width: $breakpoint-xs-max) {
+                            margin-top: $base*3;
+                            max-width: $base*40;
+                        }
+                    }
+                    @media  (max-width: $breakpoint-xs-max) {
+                        flex-direction: column;
+                    }
+                }
+                &-name {
+                    font-size: $fs-l;
+                    font-weight: $fw-bold;
+                    margin-bottom: $base*3;
+                }
+                
+
+            }
+        }
+        
+    }
+    // ==============/people====================
+}

@@ -1,0 +1,15 @@
+// Миксины
+@mixin ubuntu {
+    font-family: 'ubuntu', sans-serif;
+}
+
+@mixin montserrat {
+    font-family: 'montserrat', sans-serif;
+}
+
+@mixin list-null {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+// /Миксины

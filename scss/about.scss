@@ -1,0 +1,86 @@
+.section-about {
+    background: #04001D url(../media/img/info_bg.png) no-repeat 50% 50%;
+    
+    h2 {
+        font-size: $fs-m;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .section-subtittle {
+        text-transform: uppercase;
+    }
+}
+
+.card {
+    position: relative;
+    margin: 0 auto;
+    background: rgb(148, 144, 144);
+    background: linear-gradient(119deg, rgba(148, 144, 144, 0.4) 0%, rgba(95, 92, 92,0.14) 100%);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:  $base*5  $base*5  $base*12 rgba(0, 0, 0, 0.5);
+    height: $base * 75;
+    border-radius: $base * 5;
+    padding: $base*15 $base*5;
+    max-width: $base * 200;
+    overflow: hidden;
+    backdrop-filter: blur($base * 2);
+    &-top {
+        padding: $base*2 $base*4;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background:rgba(255, 255, 255, 0.2);
+        background: linear-gradient(132deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.2) 100%);
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &-bottom {
+        padding: $base*2 $base/2;
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background:rgba(255, 255, 255, 0.2);
+        background: linear-gradient(132deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.2) 100%);
+        width: 100%;
+        &_info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: $base $base*2;
+            border-radius: $base*2;
+            text-align: center;
+            font-size: $fs-m;
+            font-weight: $fw-regular;
+            color: rgb(134, 134, 134);
+            span {
+                font-weight: $fw-medium;
+            }
+        }
+        .plush {
+            background:rgba(255, 255, 255, 0.2);
+            background: linear-gradient(132deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 100%);
+            min-width: $base * 25;
+            @media (max-width: $breakpoint-xxs-max) {
+                min-width: $base * 15;
+            }
+        }
+    }
+    &-text {
+        font-size: $fs-l;
+        font-weight: $fw-light;
+        line-height: $base * 12;
+        @media  (max-width: $breakpoint-md-min) {
+            line-height: $base * 6;
+        }
+    }
+
+    @media  (max-width: $breakpoint-md-min) {
+        height: $base * 50;
+        padding: $base*10 $base*5;
+    }
+
+}

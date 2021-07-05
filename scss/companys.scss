@@ -1,0 +1,26 @@
+.section-companys {
+    // background: rgba(8,0,39, 1);
+    .section-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            opacity: .6;
+            transition: $transition;
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        @media  (max-width: $breakpoint-md-max) {
+            flex-wrap: wrap;
+            justify-content: center;
+            a {
+                flex-basis: 45%;
+                text-align: center;
+                margin: $base*2 0;
+            }
+        }
+    }
+}

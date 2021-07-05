@@ -1,0 +1,99 @@
+.btn {
+    cursor: pointer;
+    &--main {
+        position: absolute;
+        z-index: 20;
+        width: $base * 68;
+        height: $base * 16;
+        box-shadow: $base*5 $base*5 $base*12 rgba(0, 0, 0, 0.5);
+        border-radius: $base*5;
+        background:rgba(255, 255, 255, 0.2);
+        background: linear-gradient(132deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: $base*0.6 solid rgba(255, 255, 255, 0.5);
+        border-left: $base*0.6 solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur($base);
+
+        @include montserrat;
+        color: #fff;
+        font-weight: $fw-bold;
+        text-transform: uppercase;
+        letter-spacing: $base;
+        font-size: $fs-m;
+        text-decoration: none;
+        transition: $transition;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: $transition;
+        }
+    }
+
+    &--submit {
+        width:  $base * 30;
+        height:  $base * 10;
+        border-radius:  $base *5;
+        border: none;
+        color: #575757;
+        text-transform: uppercase;
+        font-weight: $fw-medium;
+        background:rgba(255, 255, 255, 0.9);
+        // background: linear-gradient(132deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.5) 100%);
+        border-top: $base*0.5 solid rgba(255, 255, 255, 0.7);
+        border-left: $base*0.5 solid rgba(255, 255, 255, 0.7);
+    }
+
+    &--catalog {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:  $base*24;
+        height:  $base*8;
+        border-radius:  $base*5;
+        border: none;
+        color: #575757;
+        text-transform: lowercase;
+        font-weight: $fw-medium;
+        // background:rgba(255, 255, 255, 0.2);
+        // background: linear-gradient(132deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.5) 100%);
+        background-color: #fff;
+        border-top: $base*0.5 solid rgba(255, 255, 255, 0.7);
+        border-left: $base*0.5 solid rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+
+        font-size: $fs-xs;
+        font-weight: $fw-medium;
+    }
+}
+
+
+.btn_menu {
+    @include ubuntu;
+    font-size: $fs-sm;
+    font-weight: $fw-bold;
+
+    // display: inline-block;
+    margin: 0;
+    padding: $base*3 $base*4;
+    border: 1px solid transparent;
+    background: none;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: $transition;
+    box-sizing: border-box;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-left: auto;
+    &--no-bg {
+        // background-color: #D2E1FF;
+        color: #adb4d2;
+        border: 1px solid #D1D1E4;
+        &:hover {
+            color: darken(#adb4d2, 20%);
+            border: 1px solid darken(#D1D1E4, 20%);
+        }
+    }
+}

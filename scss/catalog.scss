@@ -1,0 +1,57 @@
+.section-catalog {
+    background: #04001D;
+    overflow: hidden;
+    h2 {
+        text-align: center;
+    }
+
+    .vertical-indent--m {
+        padding-bottom: $base*15 -  $base*7.5;
+    }
+    &_elips {
+        background: url(../media/img/elips_catalog.png) no-repeat 50% 50%;
+    }
+}
+
+.catalog-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.catalog-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding:  $base*6  $base*4;
+    width:  $base*60;
+    min-height:  $base*74;
+    margin-bottom:  $base * 7.5;
+    overflow: hidden;
+
+    background: rgb(148, 144, 144);
+    background: linear-gradient(119deg, rgba(148, 144, 144, 0.4) 0%, rgba(95, 92, 92,0.14) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: $base*2 $base*2 $base*9 rgba(0, 0, 0, 0.5);
+    border-radius: $base * 5;
+    backdrop-filter: blur($base * 2);
+
+    &_img {
+        margin-bottom:  $base*3;
+    }
+    &_title {
+        font-size: $fs-m;
+        font-weight: $fw-medium;
+        text-transform: uppercase;
+        margin-bottom:  $base*3;
+    }
+    &_descr {
+        font-size: $fs-s;
+        font-weight: $fw-medium;
+        margin-bottom:  $base*3;
+    }
+}

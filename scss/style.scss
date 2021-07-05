@@ -1,0 +1,204 @@
+// Подключения
+@import url(../css/normalize.css); 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+@import "mixins.scss";
+@import "variables.scss";
+@import "animate.scss";
+
+@import "menu.scss";
+@import "promo.scss";
+@import "btns.scss";
+@import "companys.scss";
+@import "about.scss";
+@import "stats.scss";
+@import "form.scss";
+@import "catalog.scss";
+@import "faq.scss";
+@import "jurists.scss";
+@import "quotes.scss";
+@import "footer.scss";
+@import "pages.scss";
+@import "modal.scss";
+
+// /Подключения
+
+// Перевод в ремы
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function rem($num) {
+    @return (strip-unit($num) / 16) * 1rem;
+}
+
+// Для адаптива
+html {
+    @media  (max-width: $breakpoint-md-max) {
+        font-size: 14px;
+    }
+
+    @media  (max-width: $breakpoint-sm-max) {
+        font-size: 10px;
+    }
+}
+// Перевод в ремы
+
+
+// Базовые стили
+* {
+    outline: 0;
+}
+
+body {
+    @include ubuntu;
+    padding-top: $base * 15;
+    color: #fff;
+    outline: 0 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include montserrat;
+    margin: 0;
+    padding: 0;
+    font-weight: $fw-regular;
+    color: #fff;
+}
+h2 {
+    margin-bottom: $base*8;
+    text-transform: uppercase;
+    font-size: $fs-m;
+}
+.section-subtittle {
+    font-size: $fs-l;
+    color: #fff;
+    font-weight: $fw-light;
+    text-align: center;
+    margin-bottom: $base*12;
+    span {
+        font-weight: $fw-bold;
+    }
+    @media  (max-width: $breakpoint-xs-max) {
+        margin-bottom: $base*4;
+    }
+    
+}
+
+
+
+.visually-hidden {
+    display: none;
+}
+
+
+
+// Container=============
+.section-inner {
+    max-width: $base*225;
+    margin: 0 auto;
+    
+    &--wide {
+        max-width: $base*300;
+    }
+}
+
+.section-outer {
+    padding: 0 $base*5;
+}
+// /Container=============
+
+// Padding top and bottom=============
+.vertical-indent {
+    @mixin vertical-indent ($size) {
+        padding-top: $size;
+        padding-bottom: $size;
+    }
+
+    &--s { @include vertical-indent ($base*5); }
+    &--sm { @include vertical-indent ($base*10); }
+    &--m { @include vertical-indent ($base*15); }
+    &--l { @include vertical-indent ($base*30); }
+
+
+    @media  (max-width: $breakpoint-md-max) {
+        &--sm { @include vertical-indent ($base*5); }
+        // &--l { @include vertical-indent ($base*10); }
+    }
+    @media  (max-width: $breakpoint-xs-max) {
+        // &--m { @include vertical-indent ($base*5); }
+        // &--l { @include vertical-indent ($base*10); }
+    }
+}
+// /Padding top and bottom=============
+
+
+// DOTS
+.dots-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.dots-item {
+    margin-left: $base;
+    width: $base * 5;
+    height: $base * 5;
+    background-color: #B8A7FF;
+    border-radius: 100%;
+    cursor: pointer;
+    &:first-child {
+        margin-left: 0;
+    }
+    &--active {
+        background-color: #463b6b;
+    }
+}
+// /DOTS
+
+// /Базовые стили
+
+.dots {
+    width: 100%;
+    &-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &-item {
+        margin-left: $base;
+        width: $base * 5;
+        height: $base * 5;
+        background-color: #B8A7FF;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+}
+
+// Стилизация скроллбара
+::-webkit-scrollbar {
+    width: $base*4.5;
+    
+    &-track {
+        background: rgb(250,220,255);
+        background: linear-gradient(3deg, rgba(250,220,255,1) 0%, rgba(142,47,179,1) 6%, rgba(255,78,228,0.5427350427350428) 86%);
+    }
+    &-button {
+        background: rgb(93,9,73);
+        background: linear-gradient(128deg, rgba(93,9,73,1) 24%, rgba(17,17,110,1) 86%);
+        height: $base*4;
+    }
+    &-corner {
+        background: rgb(238, 167, 221);
+    }
+    &-thumb {
+        background: rgb(93,9,73);
+        background: linear-gradient(128deg, rgba(93,9,73,1) 24%, rgba(17,17,110,1) 86%);
+        border-radius: $base; 
+        border: $base/2 solid rgb(253, 167, 233);
+        transition: $transition;
+        &:hover {
+            background: linear-gradient(128deg, rgba(93,9,73,1) 30%, rgba(17,17,110,1) 70%);
+            transition: $transition;
+        }
+    }
+}
+// /Стилизация скроллбара
